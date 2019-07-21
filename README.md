@@ -1,4 +1,4 @@
 # leetCode
 
 str.split("");
-str.join();
+str.join("");
