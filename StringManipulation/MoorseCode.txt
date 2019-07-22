@@ -12,13 +12,15 @@ https://leetcode.com/problems/unique-morse-code-words/
 
 var uniqueMorseRepresentations = function(words) {
     
+    //array for 26 letters of alphabetic to moorse code mapping
+    
     let alphabet=[.-,-...,-.-.,-..,.,..-.,--.,....,..,.---,-.-,.-..,--,-.,---,.--.,--.-,.-.,...,-,..-,...-,.--,-..-,-.--,--..];
     let convertedArray=[];
     for (let i=0;iwords.length;i++){
         let temp=[];
         for(let j=0;jwords[i].length;j++){
             
-          temp .push(alphabet[words[i].charCodeAt(j)-97]);              //converting worgs into moorse code array
+          temp .push(alphabet[words[i].charCodeAt(j)-97]);              //converting words into moorse code array
             
         }
         temp.join();
@@ -26,7 +28,7 @@ var uniqueMorseRepresentations = function(words) {
         convertedArray.push(temp);
     }
 for(let k=0;kconvertedArray.length;k++){
-   convertedArray[k] =convertedArray[k].join();                         // combining moorse code array to string for comparison of different transformations.
+   convertedArray[k] =convertedArray[k].join();                         // combining moorse code array to string for comparison of                                                                                   different transformations.
     
 }
   return  convertedArray.unique().length; 
