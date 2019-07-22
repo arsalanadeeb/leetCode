@@ -2,7 +2,7 @@
 
 
                     gives ascii value at string position     convert integer to char
-//str.split("");    splitArray[i].charCodeAt(0);             String.fromCharCode(temp)    
+//str.split("");    "Aellow".charCodeAt(0);  //65           String.fromCharCode(65) //"A"   
 
 
 
