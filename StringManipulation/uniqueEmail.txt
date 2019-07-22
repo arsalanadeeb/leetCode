@@ -1,0 +1,50 @@
+Problem:-
+
+
+
+
+
+--------------------Solution-----------------------------
+
+
+TestCase:-numUniqueEmails(["test.email+alex@leetcode.com","test.email.leet+alex@code.com"]);
+
+/**
+ * @param {string[]} emails
+ * @return {number}
+ */
+var numUniqueEmails = function(emails) {
+    let finalArray=[];
+    
+    for(let i=0;i<emails.length;i++){
+
+        let temp=emails[i];                      //"test.email+alex@leetcode.com"
+        let tempArr=temp.split("@");            //["test.email+alex", "leetcode.com"]
+       let x= removeDotAndPlus(tempArr[0]);    //"testemail"
+        finalArray.push(x+"@"+tempArr[1]);    //testemail@leetcode.com
+        
+}
+    
+   return finalArray.unique().length;     //returning the count of unique element in array of formatted string according to problem premisis.
+};
+
+
+///////////////This code remove . amd eliminates charecters after + symbol.
+let removeDotAndPlus=function(str){
+    
+    let temp=str.split("+");//["test.email", "alex"]
+    let rena=temp[0];
+    let mena=rena.split(".");
+    return mena.join("");
+    
+    
+}
+
+///////////////This code is used to find no of unique element in an array.
+
+
+Array.prototype.unique = function() {
+  return this.filter(function (value, index, self) { 
+    return self.indexOf(value) === index;
+  });
+}
