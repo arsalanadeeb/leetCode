@@ -1,0 +1,41 @@
+--------------------------Problem---------------------------------------------------------------------------
+
+
+https://leetcode.com/problems/unique-morse-code-words/
+
+
+--------------------------solution--------------------------------------
+
+
+
+
+
+var uniqueMorseRepresentations = function(words) {
+    
+    let alphabet=[.-,-...,-.-.,-..,.,..-.,--.,....,..,.---,-.-,.-..,--,-.,---,.--.,--.-,.-.,...,-,..-,...-,.--,-..-,-.--,--..];
+    let convertedArray=[];
+    for (let i=0;iwords.length;i++){
+        let temp=[];
+        for(let j=0;jwords[i].length;j++){
+            
+          temp .push(alphabet[words[i].charCodeAt(j)-97]);              //converting worgs into moorse code array
+            
+        }
+        temp.join();
+    
+        convertedArray.push(temp);
+    }
+for(let k=0;kconvertedArray.length;k++){
+   convertedArray[k] =convertedArray[k].join();                         // combining moorse code array to string for comparison of different transformations.
+    
+}
+  return  convertedArray.unique().length; 
+    
+};
+////////////////////////////////////////////this function gives unique element in array and returns an array
+
+Array.prototype.unique = function() {
+  return this.filter(function (value, index, self) { 
+    return self.indexOf(value) === index;
+  });
+}
