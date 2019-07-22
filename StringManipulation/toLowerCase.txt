@@ -1,0 +1,22 @@
+
+
+
+                    gives ascii value at string position     convert integer to char
+//str.split("");    splitArray[i].charCodeAt(0);             String.fromCharCode(temp)    
+
+
+
+var toLowerCase = function(str) {
+    let finalArray=[];
+    let splitArray=str.split("");  //["H", "e", "l", "l", "o"]
+    
+    for(let i=0;i<splitArray.length;i++){
+        
+       let temp= splitArray[i].charCodeAt(0);
+        if(temp>=65 && temp<=91){temp+=32;finalArray.push(String.fromCharCode(temp));}
+        else
+        {finalArray.push(splitArray[i]);}
+        
+    }
+    return finalArray.join("");
+};
