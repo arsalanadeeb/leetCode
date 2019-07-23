@@ -1,0 +1,19 @@
+Problem:--------------
+
+https://leetcode.com/problems/reverse-words-in-a-string-iii/
+
+
+Solution:-------------
+
+var reverseWords = function(s) {//"Let's take LeetCode contest"
+    
+    let sArr=s.split(" ");     //["Let's", "take", "LeetCode", "contest"]
+                     
+                     
+     let sArrRev=sArr.map(function(num){return num.split("").reverse().join("");});
+    // ["s'teL", "ekat", "edoCteeL", "tsetnoc"]
+    
+    return sArrRev.join(" ");//"s'teL ekat edoCteeL tsetnoc"
+      
+                     
+};  
