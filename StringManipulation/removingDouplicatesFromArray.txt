@@ -1,0 +1,28 @@
+/**
+ * @param {number[]} nums
+ * @return {number}
+ */
+var removeDuplicates = function(nums) {
+    let count=0;
+    for(let i=0;i<nums.length;i++){
+         if(nums[i]=="X"){continue;}
+        for(let j=i+1;j<nums.length;j++){
+           
+            if(nums[i]==nums[j]){
+               
+               nums[j]="X";
+                ++count;
+               }
+            
+            
+            
+            
+        }
+    }
+    
+    nums.sort().indexOf("X")
+    if(count==0){return nums.length;}
+
+    return nums.sort().slice(0,nums.indexOf("X")).length;
+    
+};
