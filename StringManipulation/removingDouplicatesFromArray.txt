@@ -1,6 +1,5 @@
 /**
- * @param {number[]} nums
- * @return {number}
+This is a optimize  brute force because problem statement says it should be done in O(1) Space Complexity. 
  */
 var removeDuplicates = function(nums) {
     let count=0;
