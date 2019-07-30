@@ -1,0 +1,50 @@
+Given an array nums of length n. All elements appear in pairs except one of them. Find this single element that appears alone.
+Pairs of the same element cannot be adjacent:
+
+Input: [2, 2, 1, 1, 9, 9, 5, 2, 2]
+Output: 5
+
+
+
+
+
+
+
+
+let oddOne=(arr)=>{
+			
+
+let flag=0;
+			
+
+for(let i=0;i<arr.length;i++){
+			
+
+if(flag==1){
+			
+flag=0;
+
+			continue;
+
+				    }
+			
+else{
+			
+if(arr[i]==arr[i+1]){
+			
+flag=1;
+
+}
+			
+else{
+			
+return arr[i];
+		   
+
+}
+}
+}
+
+
+
+}
