@@ -11,35 +11,24 @@ Output: 5
 
 
 
+-------------solution----------------
 let oddOne=(arr)=>{
-			
-
+debugger;
 let flag=0;
-			
 
 for(let i=0;i<arr.length;i++){
-			
 
 if(flag==1){
-			
 flag=0;
-
-			continue;
-
-				    }
-			
+continue;
+}
 else{
-			
 if(arr[i]==arr[i+1]){
-			
 flag=1;
 
 }
-			
 else{
-			
 return arr[i];
-		   
 
 }
 }
